@@ -17,6 +17,7 @@ To determine whether an applicant is eligible for a specific card, all of the ca
 * Use proper DI mechanism
 * Build a better rule engine to allow different 'OR' and 'AND' combinations of `EligibilityChecker`s
 * Use [an ORM instead of repositories](https://ayende.com/blog/3955/repository-is-the-new-singleton)
+* When scaling, it's of course necessary to separate the different parts (Model, Controllers, DAL..) into different projects
 * Better routing definitions
 
 ###Client
