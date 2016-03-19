@@ -1,0 +1,20 @@
+﻿.container {
+    background-color: #A4B7BD;
+}
+.selected .selected-indicator {
+    background-image:url(http://findicons.com/files/icons/2192/flavour_extended/48/check.png); 
+    background-repeat:no-repeat; 
+    width:48px; 
+    height:48px; 
+    position:absolute; 
+    right: 55px; 
+    top:15px;
+}
+
+.selected a, .selected .header {
+    color: lightgreen;
+}
+
+.cc-item {
+    cursor: pointer;
+}

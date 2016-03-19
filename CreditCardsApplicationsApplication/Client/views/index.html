@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit cards applicants applications</title>
+	<meta charset="utf-8" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../styles/main.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div id="applicants-container">
+            <!-- Page Header -->
+            <div class="row-fluid">
+                <h1 class="page-header">
+                    Credit Card Applications
+                    <small>Select applicant to view available cards</small>
+                </h1>
+            </div>
+            <!-- Applicants Row -->
+            <div class="row applicants-row">
+                <span>Loading...</span>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- credit cards section -->
+        <div id="cc-container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="page-header">
+                        Select card(s) to view available credit
+                    </h3>
+                </div>
+            </div>
+            <div class="cc-row row">Nothing to show yet..</div>
+            <div class="row total-row">
+                <h3>Total credit available:</h3>
+                <span>£<span id="total-credit">0</span></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/applicantsController.js"></script>
+    <script src="../scripts/creditCardsController.js"></script>
+
+    <!-- TODO: a better way to store these templates-->
+    <div id="templates-container" style="display: none">
+        <!-- applicant template -->
+        <div class="col-md-4 applicant-item">
+            <a href="#" class="applicant-link">
+                <span class="selected-indicator"></span>
+                <img class="img-responsive img-circle" src="http://placehold.it/700x400" alt="" style="height: 211px; width: 293px;">
+            </a>
+            <h3>
+                <a href="#" class="applicant-name applicant-link"></a>
+            </h3>
+            <p>
+                <ul class="list-group">
+                    <li class="list-group-item">Date of birth: <strong class="dob"></strong></li>
+                    <li class="list-group-item">Annual Income: <strong>£<span class="income"></span></strong></li>
+                    <li class="list-group-item"><strong class="employment"></strong></li>
+                    <li class="list-group-item"><strong class="house-num"></strong> At Postcode <strong class="postcode"></strong></li>
+                </ul>
+            </p>
+        </div>
+        <!-- /applicant -->
+        <!-- credit card template -->
+        <div class="col-md-4 cc-item">
+            <span class="selected-indicator"></span>
+            <h3>
+                <span class="cc-name header"></span>
+            </h3>
+            <h4>
+                <span class="cc-desc header"></span>
+            </h4>
+            <p>
+                <ul class="list-group">
+                    <li class="list-group-item">APR: <strong class="apr"></strong></li>
+                    <li class="list-group-item">Balance transfer offer duration: <strong class="balance-transfer"></strong> months</li>
+                    <li class="list-group-item">Purchase offer duration: <strong class="purchase-offer"></strong> months</li>
+                    <li class="list-group-item">Available credit: <strong>£<span class="credit"></span></strong></li>
+                </ul>
+            </p>
+        </div>
+        <!-- /credit card -->
+    </div>
+</body>
+</html>
